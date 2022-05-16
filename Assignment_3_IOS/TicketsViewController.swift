@@ -1,15 +1,14 @@
 //
-//  ViewController.swift
+//  TicketsViewController.swift
 //  Assignment_3_IOS
 //
-//  Created by Christopher Rayner Halim on 13/5/2022.
+//  Created by Christopher Rayner Halim on 16/5/2022.
 //
 
 import UIKit
 
-class ViewController: UIViewController
+class TicketsViewController: UIViewController
 {
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
