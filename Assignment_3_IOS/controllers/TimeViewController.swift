@@ -10,6 +10,8 @@ import UIKit
 class TimeViewController: UIViewController
 {
     
+    var timeSelection: String = ""
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -17,10 +19,14 @@ class TimeViewController: UIViewController
     }
     @IBAction func on12Click(_ sender: Any)
     {
+        timeSelection = "12:00"
+        UserDefaults.standard.set(timeSelection, forKey: MOVIE_TIME)
         self.performSegue(withIdentifier: "seatsSegue", sender: nil)
     }
     @IBAction func on15Click(_ sender: Any)
     {
+        timeSelection = "15:00"
+        UserDefaults.standard.set(timeSelection, forKey: MOVIE_TIME)
         self.performSegue(withIdentifier: "seatsSegue", sender: nil)
     }
 }

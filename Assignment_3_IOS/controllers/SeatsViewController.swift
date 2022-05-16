@@ -9,6 +9,9 @@ import UIKit
 
 class SeatsViewController: UIViewController
 {
+    
+    var seatSelection: String = ""
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -16,6 +19,8 @@ class SeatsViewController: UIViewController
     }
     @IBAction func onConfirmClick(_ sender: Any)
     {
+        
+        UserDefaults.standard.set(seatSelection, forKey: MOVIE_SEAT)
         self.performSegue(withIdentifier: "confirmSegue", sender: nil)
     }
 }
