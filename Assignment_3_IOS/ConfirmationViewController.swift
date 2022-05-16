@@ -9,6 +9,9 @@ import UIKit
 
 class ConfirmationViewController: UIViewController
 {
+    @IBOutlet weak var seatLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()

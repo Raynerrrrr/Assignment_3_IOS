@@ -32,14 +32,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZv-sY-rrk">
-                                <rect key="frame" x="125" y="225" width="70" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Movies"/>
-                                <connections>
-                                    <action selector="onMoviesClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rN0-wR-MFu"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isG-e4-uwg">
                                 <rect key="frame" x="83.5" y="16" width="153" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -52,10 +44,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBx-6d-DdN">
-                                <rect key="frame" x="124" y="311" width="71" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZv-sY-rrk">
+                                <rect key="frame" x="125" y="182" width="70" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Tickets"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Movies"/>
+                                <connections>
+                                    <action selector="onMoviesClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rN0-wR-MFu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBx-6d-DdN">
+                                <rect key="frame" x="113" y="268" width="94" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="My Tickets"/>
                                 <connections>
                                     <action selector="onTicketsClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2hm-6D-T4T"/>
                                 </connections>
@@ -66,12 +66,12 @@
                         <constraints>
                             <constraint firstItem="eee-t7-wpB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4If-ZS-vP7"/>
                             <constraint firstItem="wZv-sY-rrk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GX7-ux-htY"/>
-                            <constraint firstItem="wZv-sY-rrk" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-21.5" id="MMN-z0-YuX"/>
+                            <constraint firstItem="wZv-sY-rrk" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-64.5" id="MMN-z0-YuX"/>
                             <constraint firstItem="eee-t7-wpB" firstAttribute="top" secondItem="isG-e4-uwg" secondAttribute="bottom" constant="8" symbolic="YES" id="S6C-J3-LD9"/>
                             <constraint firstItem="UBx-6d-DdN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gAV-i5-HqY"/>
                             <constraint firstItem="isG-e4-uwg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kcs-YU-gd1"/>
                             <constraint firstItem="UBx-6d-DdN" firstAttribute="top" secondItem="wZv-sY-rrk" secondAttribute="bottom" constant="55" id="n4C-ZQ-4bm"/>
-                            <constraint firstItem="wZv-sY-rrk" firstAttribute="top" secondItem="eee-t7-wpB" secondAttribute="bottom" constant="129" id="zCK-5k-sU6"/>
+                            <constraint firstItem="wZv-sY-rrk" firstAttribute="top" secondItem="eee-t7-wpB" secondAttribute="bottom" constant="86" id="zCK-5k-sU6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WBV-84-LAs"/>
@@ -111,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69t-R9-2gX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19" y="772"/>
+            <point key="canvasLocation" x="19" y="858"/>
         </scene>
         <!--Movies View Controller-->
         <scene sceneID="SZx-7Z-uGa">
@@ -206,6 +206,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="igv-Zd-eKC"/>
                     <connections>
+                        <outlet property="firstMovieImg" destination="VDf-O6-tV3" id="pbu-HF-hLI"/>
+                        <outlet property="firstMovieLabel" destination="wIe-ib-Z7D" id="Kie-Cc-dHj"/>
+                        <outlet property="secondMovieImg" destination="pRF-CZ-lSW" id="3hq-vP-wqU"/>
+                        <outlet property="secondMovieLabel" destination="dve-Yl-mPQ" id="rpP-SU-b2R"/>
                         <segue destination="rfP-HK-0zW" kind="show" identifier="buySegue" id="36g-qm-Yzs"/>
                     </connections>
                 </viewController>
@@ -331,22 +335,50 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="OZc-PH-eG7">
                                 <rect key="frame" x="69" y="140" width="182" height="200"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seats : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grp-iA-vzp">
-                                        <rect key="frame" x="0.0" y="0.0" width="62.5" height="100"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4YZ-15-Gx3">
-                                        <rect key="frame" x="0.0" y="100" width="57.5" height="100"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="RjM-hU-3OV">
+                                        <rect key="frame" x="0.0" y="0.0" width="172.5" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seats: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grp-iA-vzp" userLabel="Seats :">
+                                                <rect key="frame" x="0.0" y="38.5" width="57.5" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5No-fS-Iem">
+                                                <rect key="frame" x="147.5" y="38.5" width="25" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="dtQ-F0-0Gm">
+                                        <rect key="frame" x="0.0" y="100" width="163" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eve-nR-AuV" userLabel="Seats :">
+                                                <rect key="frame" x="0.0" y="38.5" width="48" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bj5-cy-Voj">
+                                                <rect key="frame" x="105" y="38.5" width="58" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="RjM-hU-3OV" firstAttribute="top" secondItem="OZc-PH-eG7" secondAttribute="top" id="31c-1H-zf2"/>
+                                    <constraint firstItem="dtQ-F0-0Gm" firstAttribute="leading" secondItem="OZc-PH-eG7" secondAttribute="leading" id="5Ng-sC-GIg"/>
                                     <constraint firstAttribute="height" constant="200" id="5t2-1U-Xkv"/>
                                     <constraint firstAttribute="width" constant="182" id="Ksm-uF-ItP"/>
+                                    <constraint firstAttribute="trailing" secondItem="dtQ-F0-0Gm" secondAttribute="trailing" constant="19" id="PEj-is-kRm"/>
+                                    <constraint firstAttribute="bottom" secondItem="dtQ-F0-0Gm" secondAttribute="bottom" id="W0P-ZQ-mTb"/>
+                                    <constraint firstItem="RjM-hU-3OV" firstAttribute="leading" secondItem="OZc-PH-eG7" secondAttribute="leading" id="aeA-4K-wrb"/>
+                                    <constraint firstAttribute="trailing" secondItem="RjM-hU-3OV" secondAttribute="trailing" constant="9.5" id="qJn-cl-Com"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -365,6 +397,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="V7N-pO-CAs"/>
+                    <connections>
+                        <outlet property="priceLabel" destination="bj5-cy-Voj" id="wpK-kh-v9e"/>
+                        <outlet property="seatLabel" destination="5No-fS-Iem" id="R4p-sD-Dhu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r9u-W3-3Ip" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

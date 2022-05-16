@@ -9,6 +9,12 @@ import UIKit
 
 class MoviesViewController: UIViewController
 {
+    @IBOutlet weak var firstMovieLabel: UILabel!
+    @IBOutlet weak var secondMovieLabel: UILabel!
+    
+    @IBOutlet weak var firstMovieImg: UIImageView!
+    @IBOutlet weak var secondMovieImg: UIImageView!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
