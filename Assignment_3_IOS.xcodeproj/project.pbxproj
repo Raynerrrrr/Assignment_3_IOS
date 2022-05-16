@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B51C5DF2832502B007E0D4D /* seats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B51C5DE2832502B007E0D4D /* seats.swift */; };
 		F71161A52831D8E400BC6C7C /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71161A42831D8E400BC6C7C /* ConfirmationViewController.swift */; };
 		F71161A72831DBA500BC6C7C /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71161A62831DBA500BC6C7C /* TicketsViewController.swift */; };
 		F71B41DE282D54E1004F5DD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B41DD282D54E1004F5DD8 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B51C5DE2832502B007E0D4D /* seats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seats.swift; sourceTree = "<group>"; };
 		F71161A42831D8E400BC6C7C /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		F71161A62831DBA500BC6C7C /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
 		F71B41DA282D54E1004F5DD8 /* Assignment_3_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment_3_IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +49,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B51C5DB28325002007E0D4D /* models */ = {
+			isa = PBXGroup;
+			children = (
+				3B51C5DE2832502B007E0D4D /* seats.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		3B51C5DC28325008007E0D4D /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F71B41E3282D54E1004F5DD8 /* Main.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
+		3B51C5DD28325015007E0D4D /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F71B41E1282D54E1004F5DD8 /* HomeViewController.swift */,
+				F7B776692831065B00BE9CF5 /* MoviesViewController.swift */,
+				F7B7766B2831104900BE9CF5 /* TimeViewController.swift */,
+				F72FECDA28312DA9009958F6 /* SeatsViewController.swift */,
+				F71161A42831D8E400BC6C7C /* ConfirmationViewController.swift */,
+				F71161A62831DBA500BC6C7C /* TicketsViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
 		F71B41D1282D54E1004F5DD8 = {
 			isa = PBXGroup;
 			children = (
@@ -66,15 +97,11 @@
 		F71B41DC282D54E1004F5DD8 /* Assignment_3_IOS */ = {
 			isa = PBXGroup;
 			children = (
+				3B51C5DD28325015007E0D4D /* controllers */,
+				3B51C5DC28325008007E0D4D /* storyboards */,
+				3B51C5DB28325002007E0D4D /* models */,
 				F71B41DD282D54E1004F5DD8 /* AppDelegate.swift */,
 				F71B41DF282D54E1004F5DD8 /* SceneDelegate.swift */,
-				F71B41E1282D54E1004F5DD8 /* HomeViewController.swift */,
-				F7B776692831065B00BE9CF5 /* MoviesViewController.swift */,
-				F7B7766B2831104900BE9CF5 /* TimeViewController.swift */,
-				F72FECDA28312DA9009958F6 /* SeatsViewController.swift */,
-				F71161A42831D8E400BC6C7C /* ConfirmationViewController.swift */,
-				F71161A62831DBA500BC6C7C /* TicketsViewController.swift */,
-				F71B41E3282D54E1004F5DD8 /* Main.storyboard */,
 				F71B41E6282D54E2004F5DD8 /* Assets.xcassets */,
 				F71B41E8282D54E2004F5DD8 /* LaunchScreen.storyboard */,
 				F71B41EB282D54E2004F5DD8 /* Info.plist */,
@@ -158,6 +185,7 @@
 				F72FECDB28312DA9009958F6 /* SeatsViewController.swift in Sources */,
 				F7B7766C2831104900BE9CF5 /* TimeViewController.swift in Sources */,
 				F71161A72831DBA500BC6C7C /* TicketsViewController.swift in Sources */,
+				3B51C5DF2832502B007E0D4D /* seats.swift in Sources */,
 				F71B41DE282D54E1004F5DD8 /* AppDelegate.swift in Sources */,
 				F71B41E0282D54E1004F5DD8 /* SceneDelegate.swift in Sources */,
 				F7B7766A2831065B00BE9CF5 /* MoviesViewController.swift in Sources */,
