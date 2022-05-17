@@ -332,37 +332,71 @@
                                     <action selector="onConfirmClick:" destination="LYI-Ix-i4a" eventType="touchUpInside" id="dxw-Eo-Kxy"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="OZc-PH-eG7">
-                                <rect key="frame" x="69" y="140" width="182" height="200"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="OZc-PH-eG7">
+                                <rect key="frame" x="74" y="141.5" width="172" height="197"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="RjM-hU-3OV">
-                                        <rect key="frame" x="0.0" y="0.0" width="172.5" height="100"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VEA-FA-Qxs">
+                                        <rect key="frame" x="0.0" y="0.0" width="172" height="23"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seats: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grp-iA-vzp" userLabel="Seats :">
-                                                <rect key="frame" x="0.0" y="38.5" width="57.5" height="23"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxt-hL-J2p" userLabel="movie">
+                                                <rect key="frame" x="0.0" y="0.0" width="56" height="23"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5No-fS-Iem">
-                                                <rect key="frame" x="147.5" y="38.5" width="25" height="23"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Lost City" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9as-Dk-QGm">
+                                                <rect key="frame" x="76" y="2" width="96" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="RjM-hU-3OV">
+                                        <rect key="frame" x="0.0" y="58" width="141.5" height="23"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grp-iA-vzp" userLabel="time">
+                                                <rect key="frame" x="0.0" y="0.0" width="47" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5No-fS-Iem">
+                                                <rect key="frame" x="94" y="0.0" width="47.5" height="23"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="dtQ-F0-0Gm">
-                                        <rect key="frame" x="0.0" y="100" width="163" height="100"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="DWo-AN-mal">
+                                        <rect key="frame" x="0.0" y="116" width="142.5" height="23"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eve-nR-AuV" userLabel="Seats :">
-                                                <rect key="frame" x="0.0" y="38.5" width="48" height="23"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seats: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efM-z8-hEu" userLabel="Seats :">
+                                                <rect key="frame" x="0.0" y="0.0" width="57.5" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rf0-CN-Edc">
+                                                <rect key="frame" x="117.5" y="0.0" width="25" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="dtQ-F0-0Gm">
+                                        <rect key="frame" x="0.0" y="174" width="153" height="23"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eve-nR-AuV" userLabel="price">
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="23"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bj5-cy-Voj">
-                                                <rect key="frame" x="105" y="38.5" width="58" height="23"/>
+                                                <rect key="frame" x="95" y="0.0" width="58" height="23"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -370,16 +404,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="RjM-hU-3OV" firstAttribute="top" secondItem="OZc-PH-eG7" secondAttribute="top" id="31c-1H-zf2"/>
-                                    <constraint firstItem="dtQ-F0-0Gm" firstAttribute="leading" secondItem="OZc-PH-eG7" secondAttribute="leading" id="5Ng-sC-GIg"/>
-                                    <constraint firstAttribute="height" constant="200" id="5t2-1U-Xkv"/>
-                                    <constraint firstAttribute="width" constant="182" id="Ksm-uF-ItP"/>
-                                    <constraint firstAttribute="trailing" secondItem="dtQ-F0-0Gm" secondAttribute="trailing" constant="19" id="PEj-is-kRm"/>
-                                    <constraint firstAttribute="bottom" secondItem="dtQ-F0-0Gm" secondAttribute="bottom" id="W0P-ZQ-mTb"/>
-                                    <constraint firstItem="RjM-hU-3OV" firstAttribute="leading" secondItem="OZc-PH-eG7" secondAttribute="leading" id="aeA-4K-wrb"/>
-                                    <constraint firstAttribute="trailing" secondItem="RjM-hU-3OV" secondAttribute="trailing" constant="9.5" id="qJn-cl-Com"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nNZ-bp-SUF"/>
@@ -398,8 +422,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="V7N-pO-CAs"/>
                     <connections>
+                        <outlet property="movieLabel" destination="9as-Dk-QGm" id="8U4-V9-rv0"/>
                         <outlet property="priceLabel" destination="bj5-cy-Voj" id="wpK-kh-v9e"/>
-                        <outlet property="seatLabel" destination="5No-fS-Iem" id="R4p-sD-Dhu"/>
+                        <outlet property="seatLabel" destination="Rf0-CN-Edc" id="9yv-Tw-Ken"/>
+                        <outlet property="timeLabel" destination="5No-fS-Iem" id="haB-1w-Vzf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r9u-W3-3Ip" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
