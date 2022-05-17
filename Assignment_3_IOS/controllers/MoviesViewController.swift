@@ -9,10 +9,10 @@ import UIKit
 
 class MoviesViewController: UIViewController
 {
-    
-    let firstMovie: String = ""
-    let secondMovie: String = ""
-    let thirdMovie: String = ""
+    var moviesData: [MoviesData] = []
+    var firstMovie: String = ""
+    var secondMovie: String = ""
+    var thirdMovie: String = ""
     
     @IBOutlet weak var firstMovieLabel: UILabel!
     @IBOutlet weak var secondMovieLabel: UILabel!
@@ -26,24 +26,56 @@ class MoviesViewController: UIViewController
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        firstMovieImg.image = UIImage(named: "the_lost_city.jpeg")
-        secondMovieImg.image = UIImage(named: "frozen.jpeg")
-        thirdMovieImg.image = UIImage(named: "home_alone.jpeg")
+        // Read the movie data from storage
+        moviesData = readMovieData()
+        
+        // Set the movie variables correctly
+        firstMovie = moviesData[0].name
+        secondMovie = moviesData[1].name
+        thirdMovie = moviesData[2].name
+        
+        // Set the movie names to their appropriate labels
+        firstMovieLabel.text = moviesData[0].name
+        secondMovieLabel.text = moviesData[1].name
+        thirdMovieLabel.text = moviesData[2].name
+        
+        // Match the appropriate images with those names
+        firstMovieImg.image = UIImage(named: moviesData[0].image)
+        secondMovieImg.image = UIImage(named: moviesData[1].image)
+        thirdMovieImg.image = UIImage(named: moviesData[2].image)
+    }
+    
+    // This function reads the movie data from system memory
+    func readMovieData() -> [MoviesData] {
+        // Read the highscores from user defaults
+        let defaults = UserDefaults.standard
+        
+        if let moviesArray = defaults.value(forKey: USER_DEFAULT_MOVIES_DATA) as? Data {
+            if let decodedArray = try? PropertyListDecoder().decode(Array<MoviesData>.self, from: moviesArray) {
+                return decodedArray
+            } else {
+                return []
+            }
+        } else {
+            return []
+        }
     }
     
     @IBAction func onBuyClick(_ sender: Any)
     {
-        
         UserDefaults.standard.set(firstMovie, forKey: MOVIE_NAME)
+        UserDefaults.standard.set(moviesData[0].price, forKey: MOVIE_PRICE)
         self.performSegue(withIdentifier: "buySegue", sender: nil)
     }
     @IBAction func onBuyClick2(_ sender: Any)
     {
         UserDefaults.standard.set(secondMovie, forKey: MOVIE_NAME)
+        UserDefaults.standard.set(moviesData[1].price, forKey: MOVIE_PRICE)
         self.performSegue(withIdentifier: "buySegue", sender: nil)
     }
     @IBAction func onBuyClick3(_ sender: Any) {
         UserDefaults.standard.set(thirdMovie, forKey: MOVIE_NAME)
+        UserDefaults.standard.set(moviesData[2].price, forKey: MOVIE_PRICE)
         self.performSegue(withIdentifier: "buySegue", sender: nil)
     }
 }

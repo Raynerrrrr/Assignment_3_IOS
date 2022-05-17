@@ -24,6 +24,9 @@ class HomeViewController: UIViewController
         movieArray.append(MoviesData(name: "The Lost City", image: "the_lost_city.jpeg", price: "8.50"))
         movieArray.append(MoviesData(name: "Home Alone", image: "home_alone.jpeg", price: "10.00"))
         movieArray.append(MoviesData(name: "Frozen", image: "frozen.jpeg", price: "6.00"))
+        
+        writeMovieData()
+        
     }
     
     // This function writes the movie data to the user defaults

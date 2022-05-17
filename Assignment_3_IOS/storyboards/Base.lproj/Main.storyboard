@@ -98,20 +98,61 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="chD-h7-yO8">
+                                <rect key="frame" x="0.0" y="76" width="320" height="404"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ticketCells" textLabel="I2g-kR-rxM" detailTextLabel="0Ek-24-Lrb" style="IBUITableViewCellStyleValue1" id="yOD-8P-WWh">
+                                        <rect key="frame" x="0.0" y="44.5" width="320" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yOD-8P-WWh" id="Dwx-Ox-3ap">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I2g-kR-rxM">
+                                                    <rect key="frame" x="16" y="15" width="25" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Ek-24-Lrb">
+                                                    <rect key="frame" x="271" y="15" width="33" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LcI-mi-r2e" id="JmY-bz-fAy"/>
+                                    <outlet property="delegate" destination="LcI-mi-r2e" id="4ds-U5-2oH"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tYL-3L-mk6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="chD-h7-yO8" firstAttribute="leading" secondItem="tYL-3L-mk6" secondAttribute="leading" id="2CN-xF-JWL"/>
                             <constraint firstItem="3WX-gr-9vI" firstAttribute="leading" secondItem="tYL-3L-mk6" secondAttribute="leading" constant="81" id="CTw-ze-fnZ"/>
                             <constraint firstItem="tYL-3L-mk6" firstAttribute="trailing" secondItem="3WX-gr-9vI" secondAttribute="trailing" constant="81" id="E9P-NH-QYk"/>
+                            <constraint firstItem="chD-h7-yO8" firstAttribute="bottom" secondItem="tYL-3L-mk6" secondAttribute="bottom" id="Lra-Ml-K05"/>
+                            <constraint firstItem="chD-h7-yO8" firstAttribute="top" secondItem="3WX-gr-9vI" secondAttribute="bottom" constant="8" symbolic="YES" id="Yu0-nG-ttl"/>
                             <constraint firstItem="3WX-gr-9vI" firstAttribute="top" secondItem="tYL-3L-mk6" secondAttribute="top" id="eUm-N2-Tvp"/>
+                            <constraint firstItem="chD-h7-yO8" firstAttribute="trailing" secondItem="tYL-3L-mk6" secondAttribute="trailing" id="hKk-iT-seR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sUZ-dH-Jb2"/>
+                    <connections>
+                        <outlet property="ticketsTableView" destination="chD-h7-yO8" id="S2k-my-w7m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69t-R9-2gX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19" y="858"/>
+            <point key="canvasLocation" x="18.75" y="857.5"/>
         </scene>
         <!--Movies View Controller-->
         <scene sceneID="SZx-7Z-uGa">

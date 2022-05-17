@@ -23,11 +23,11 @@ let USER_DEFAULT_MOVIES_DATA = "moviesData"
 
 class ConfirmationViewController: UIViewController
 {
+    var userMovieData: [UserMovieData] = []
     var name: String = ""
     var time: String = ""
     var seat: String = ""
     var price: String = ""
-    var userMovieData: [UserMovieData] = []
     
     @IBOutlet weak var movieLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -38,10 +38,17 @@ class ConfirmationViewController: UIViewController
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        // Retrieve the users movie choices from memory
         name = UserDefaults.standard.string(forKey: MOVIE_NAME)!
         time = UserDefaults.standard.string(forKey: MOVIE_TIME)!
         seat = UserDefaults.standard.string(forKey: MOVIE_SEAT)!
         price = UserDefaults.standard.string(forKey: MOVIE_PRICE)!
+        
+        // Update the labels with the users choices
+        movieLabel.text = name
+        timeLabel.text = time
+        seatLabel.text = seat
+        priceLabel.text = "$\(price)"
     }
     
     func writeUsersData() {

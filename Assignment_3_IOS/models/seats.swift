@@ -15,8 +15,7 @@ class Seats: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
+        self.layer.borderColor = CGColor(red: 255, green: 130, blue: 0, alpha: 1)
     }
-    
     
 }
