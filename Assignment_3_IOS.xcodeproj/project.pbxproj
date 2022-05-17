@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3B51C5DF2832502B007E0D4D /* seats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B51C5DE2832502B007E0D4D /* seats.swift */; };
+		3B6AC2D828337D5D00D2CA2A /* the_lost_city.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6AC2D728337D5D00D2CA2A /* the_lost_city.jpeg */; };
+		3B6AC2DA28337FF800D2CA2A /* frozen.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6AC2D928337FF800D2CA2A /* frozen.jpeg */; };
+		3B6AC2DC2833803D00D2CA2A /* home_alone.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6AC2DB2833803D00D2CA2A /* home_alone.jpeg */; };
 		F71161A52831D8E400BC6C7C /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71161A42831D8E400BC6C7C /* ConfirmationViewController.swift */; };
 		F71161A72831DBA500BC6C7C /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71161A62831DBA500BC6C7C /* TicketsViewController.swift */; };
 		F71B41DE282D54E1004F5DD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B41DD282D54E1004F5DD8 /* AppDelegate.swift */; };
@@ -23,6 +26,9 @@
 
 /* Begin PBXFileReference section */
 		3B51C5DE2832502B007E0D4D /* seats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seats.swift; sourceTree = "<group>"; };
+		3B6AC2D728337D5D00D2CA2A /* the_lost_city.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = the_lost_city.jpeg; sourceTree = "<group>"; };
+		3B6AC2D928337FF800D2CA2A /* frozen.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = frozen.jpeg; sourceTree = "<group>"; };
+		3B6AC2DB2833803D00D2CA2A /* home_alone.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home_alone.jpeg; sourceTree = "<group>"; };
 		F71161A42831D8E400BC6C7C /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		F71161A62831DBA500BC6C7C /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
 		F71B41DA282D54E1004F5DD8 /* Assignment_3_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment_3_IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +109,9 @@
 				F71B41DD282D54E1004F5DD8 /* AppDelegate.swift */,
 				F71B41DF282D54E1004F5DD8 /* SceneDelegate.swift */,
 				F71B41E6282D54E2004F5DD8 /* Assets.xcassets */,
+				3B6AC2D928337FF800D2CA2A /* frozen.jpeg */,
+				3B6AC2DB2833803D00D2CA2A /* home_alone.jpeg */,
+				3B6AC2D728337D5D00D2CA2A /* the_lost_city.jpeg */,
 				F71B41E8282D54E2004F5DD8 /* LaunchScreen.storyboard */,
 				F71B41EB282D54E2004F5DD8 /* Info.plist */,
 			);
@@ -168,7 +177,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F71B41EA282D54E2004F5DD8 /* LaunchScreen.storyboard in Resources */,
+				3B6AC2DC2833803D00D2CA2A /* home_alone.jpeg in Resources */,
+				3B6AC2DA28337FF800D2CA2A /* frozen.jpeg in Resources */,
 				F71B41E7282D54E2004F5DD8 /* Assets.xcassets in Resources */,
+				3B6AC2D828337D5D00D2CA2A /* the_lost_city.jpeg in Resources */,
 				F71B41E5282D54E1004F5DD8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

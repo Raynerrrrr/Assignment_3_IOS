@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct MovieData: Codable {
+struct UserMovieData: Codable {
     var name: String
     var time: String
     var seat: String
@@ -18,7 +18,8 @@ let MOVIE_NAME = "movieName"
 let MOVIE_TIME = "movieTime"
 let MOVIE_SEAT = "movieSeat"
 let MOVIE_PRICE = "moviePrice"
-let USER_DEFAULT_MOVIE_DATA = "usersMovieData"
+let USER_DEFAULT_USERS_DATA = "usersData"
+let USER_DEFAULT_MOVIES_DATA = "moviesData"
 
 class ConfirmationViewController: UIViewController
 {
@@ -26,7 +27,7 @@ class ConfirmationViewController: UIViewController
     var time: String = ""
     var seat: String = ""
     var price: String = ""
-    var userMovieData: [MovieData] = []
+    var userMovieData: [UserMovieData] = []
     
     @IBOutlet weak var movieLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -43,21 +44,21 @@ class ConfirmationViewController: UIViewController
         price = UserDefaults.standard.string(forKey: MOVIE_PRICE)!
     }
     
-    func writeMovieData() {
-        // Write the movie data to the user defaults to allow
-        // or the movie to be seen in the 'My Tickets' screen
+    func writeUsersData() {
+        // Write the user's movie data to the user defaults to allow
+        // for the movie to be seen in the 'My Tickets' screen
         // Append the data to the array
-        userMovieData.append(MovieData(name: name, time: time, seat: seat, price: price))
+        userMovieData.append(UserMovieData(name: name, time: time, seat: seat, price: price))
         // Save the array to the user defaults
         let defaults = UserDefaults.standard
-        defaults.set(try? PropertyListEncoder().encode(userMovieData), forKey: USER_DEFAULT_MOVIE_DATA)
+        defaults.set(try? PropertyListEncoder().encode(userMovieData), forKey: USER_DEFAULT_USERS_DATA)
     }
     
     @IBAction func onConfirmClick(_ sender: Any)
     {
         
         // Update the MyTickets data
-        writeMovieData()
+        writeUsersData()
         
         // Reset the User Defaults
         UserDefaults.standard.set("", forKey: MOVIE_NAME)
