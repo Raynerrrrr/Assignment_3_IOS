@@ -36,7 +36,7 @@ class TicketsViewController: UIViewController
     
     // This function reads the user's tickets from system memory
     func readUsersTickets() -> [UserMovieData] {
-        // Read the highscores from user defaults
+        // Read the tickers from user defaults
         let defaults = UserDefaults.standard
         
         if let ticketsArray = defaults.value(forKey: USER_DEFAULT_USERS_DATA) as? Data {
