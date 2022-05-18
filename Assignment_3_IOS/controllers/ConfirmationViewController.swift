@@ -48,6 +48,7 @@ class ConfirmationViewController: UIViewController
         movieLabel.text = name
         timeLabel.text = time
         seatLabel.text = seat
+//        price = price * -- the number of seats  --
         priceLabel.text = "$\(price)"
     }
     

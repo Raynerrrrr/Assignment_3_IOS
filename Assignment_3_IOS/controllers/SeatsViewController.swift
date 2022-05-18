@@ -73,8 +73,9 @@ class SeatsViewController: UIViewController, SeatSelectorDelegate
             userSeats.append(seatData)
             print(userSeats)
         } else {
-                for i in 0...userSeats.count - 1 {
-                    if userSeats[i] == seatData {
+                for i in 0...(userSeats.count - 1) {
+                    print(userSeats[i])
+                    if seatData == userSeats[i] {
                         userSeats.remove(at: i)
                     }
                 }
