@@ -8,5 +8,6 @@ We decided to split the project evenly, each taking a set of controllers and foc
 - Aryeh focussed on: Seats, tickets, and confirmation
 - Rayner focussed on: home, movies, and time
 
-Additionally, we split the presentation evenly each presenting our selected views
+Additionally, we split the presentation evenly each presenting our chosen slides
 
+https://github.com/Raynerrrrr/Assignment_3_IOS
