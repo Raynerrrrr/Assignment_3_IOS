@@ -10,7 +10,7 @@ import UIKit
 struct UserMovieData: Codable {
     var name: String
     var time: String
-    var seat: String
+    var seats: String
     var price: String
 }
 
@@ -26,7 +26,8 @@ class ConfirmationViewController: UIViewController
     var userMovieData: [UserMovieData] = []
     var name: String = ""
     var time: String = ""
-    var seat: String = ""
+    var userSeats: [String] = []
+    var seats: String = ""
     var price: String = ""
     
     @IBOutlet weak var movieLabel: UILabel!
@@ -41,25 +42,50 @@ class ConfirmationViewController: UIViewController
         // Retrieve the users movie choices from memory
         name = UserDefaults.standard.string(forKey: MOVIE_NAME)!
         time = UserDefaults.standard.string(forKey: MOVIE_TIME)!
-        seat = UserDefaults.standard.string(forKey: MOVIE_SEAT)!
+        userSeats = readUserSeats()
         price = UserDefaults.standard.string(forKey: MOVIE_PRICE)!
         
         // Update the labels with the users choices
         movieLabel.text = name
         timeLabel.text = time
-        seatLabel.text = seat
-//        price = price * -- the number of seats  --
-        priceLabel.text = "$\(price)"
+        
+        let seatCount = userSeats.count
+        seats = userSeats[0]
+        if seatCount > 1 {
+            var x = 0
+            for i in 1...(seatCount - 1) {
+                x += 1
+                seats = seats + ", \(userSeats[x])"
+            }
+        }
+        seatLabel.text = seats
+        
+        let totalPrice: Double = Double(seatCount) * Double(price)!
+        priceLabel.text = "$\(price) x \(seatCount) = $\(totalPrice)0"
     }
     
     func writeUsersData() {
         // Write the user's movie data to the user defaults to allow
         // for the movie to be seen in the 'My Tickets' screen
         // Append the data to the array
-        userMovieData.append(UserMovieData(name: name, time: time, seat: seat, price: price))
+        userMovieData.append(UserMovieData(name: name, time: time, seats: seats, price: price))
         // Save the array to the user defaults
         let defaults = UserDefaults.standard
         defaults.set(try? PropertyListEncoder().encode(userMovieData), forKey: USER_DEFAULT_USERS_DATA)
+    }
+    
+    func readUserSeats() -> [String] {
+        // Read the user's seats from user defaults
+        let defaults = UserDefaults.standard
+        if let seatsArray = defaults.value(forKey: MOVIE_SEAT) as? Data {
+            if let decodedArray = try? PropertyListDecoder().decode(Array<String>.self, from: seatsArray) {
+                return decodedArray
+            } else {
+                return []
+            }
+        } else {
+            return []
+        }
     }
     
     @IBAction func onConfirmClick(_ sender: Any)

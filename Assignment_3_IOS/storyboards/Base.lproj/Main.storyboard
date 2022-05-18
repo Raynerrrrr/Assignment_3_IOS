@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CCz-I6-utC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CCz-I6-utC">
     <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -132,21 +132,35 @@
                                     <outlet property="delegate" destination="LcI-mi-r2e" id="4ds-U5-2oH"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have 0 tickets. Please go and purchase a movie" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mk8-sG-GLY">
+                                <rect key="frame" x="16" y="214" width="288" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="VVg-AX-0C3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tYL-3L-mk6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="chD-h7-yO8" firstAttribute="leading" secondItem="tYL-3L-mk6" secondAttribute="leading" id="2CN-xF-JWL"/>
+                            <constraint firstItem="mk8-sG-GLY" firstAttribute="centerY" secondItem="Obx-pP-hAc" secondAttribute="centerY" id="6UN-me-qt8"/>
                             <constraint firstItem="3WX-gr-9vI" firstAttribute="leading" secondItem="tYL-3L-mk6" secondAttribute="leading" constant="81" id="CTw-ze-fnZ"/>
                             <constraint firstItem="tYL-3L-mk6" firstAttribute="trailing" secondItem="3WX-gr-9vI" secondAttribute="trailing" constant="81" id="E9P-NH-QYk"/>
+                            <constraint firstItem="mk8-sG-GLY" firstAttribute="leading" secondItem="tYL-3L-mk6" secondAttribute="leading" constant="16" id="HtS-O8-s3O"/>
                             <constraint firstItem="chD-h7-yO8" firstAttribute="bottom" secondItem="tYL-3L-mk6" secondAttribute="bottom" id="Lra-Ml-K05"/>
                             <constraint firstItem="chD-h7-yO8" firstAttribute="top" secondItem="3WX-gr-9vI" secondAttribute="bottom" constant="8" symbolic="YES" id="Yu0-nG-ttl"/>
+                            <constraint firstItem="mk8-sG-GLY" firstAttribute="centerX" secondItem="Obx-pP-hAc" secondAttribute="centerX" id="ZHp-R9-09p"/>
+                            <constraint firstItem="tYL-3L-mk6" firstAttribute="trailing" secondItem="mk8-sG-GLY" secondAttribute="trailing" constant="16" id="afI-5r-61f"/>
                             <constraint firstItem="3WX-gr-9vI" firstAttribute="top" secondItem="tYL-3L-mk6" secondAttribute="top" id="eUm-N2-Tvp"/>
                             <constraint firstItem="chD-h7-yO8" firstAttribute="trailing" secondItem="tYL-3L-mk6" secondAttribute="trailing" id="hKk-iT-seR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sUZ-dH-Jb2"/>
                     <connections>
+                        <outlet property="noTicketsLabel" destination="mk8-sG-GLY" id="uLp-8V-P69"/>
                         <outlet property="ticketsTableView" destination="chD-h7-yO8" id="S2k-my-w7m"/>
                     </connections>
                 </viewController>
@@ -401,14 +415,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select your seats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vY0-EB-Zl3">
-                                <rect key="frame" x="34" y="44" width="252" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select your seats (max: 5)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vY0-EB-Zl3">
+                                <rect key="frame" x="34" y="44" width="252" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEg-um-rF6">
-                                <rect key="frame" x="108" y="76" width="105" height="31"/>
+                                <rect key="frame" x="108" y="70" width="105" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Select Seats"/>
                                 <connections>
@@ -429,6 +443,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="eHs-wF-HLc"/>
                     <connections>
+                        <outlet property="titleLabel" destination="vY0-EB-Zl3" id="Zkz-I9-f79"/>
                         <segue destination="LYI-Ix-i4a" kind="show" identifier="confirmSegue" id="DZQ-H6-mOJ"/>
                     </connections>
                 </viewController>

@@ -11,6 +11,7 @@ class TicketsViewController: UIViewController
 {
     var usersTickets: [UserMovieData] = []
     
+    @IBOutlet weak var noTicketsLabel: UILabel!
     @IBOutlet weak var ticketsTableView: UITableView!
     
     override func viewDidLoad()
@@ -18,6 +19,11 @@ class TicketsViewController: UIViewController
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         usersTickets = readUsersTickets()
+        if usersTickets.isEmpty {
+            noTicketsLabel.text = "You have 0 tickets. Please go and purchase a movie"
+        } else {
+            noTicketsLabel.text = ""
+        }
     }
     
     func updateUsersTickets() {
@@ -100,7 +106,7 @@ extension TicketsViewController: UITableViewDataSource {
         }
         
         cell.textLabel?.text = tickets.name
-        cell.detailTextLabel?.text = "Time: \(tickets.time),  Seat: \(tickets.seat),  $\(tickets.price)"
+        cell.detailTextLabel?.text = "Time: \(tickets.time),  Seat: \(tickets.seats),  $\(tickets.price)"
         
         // Return the cell to the tableview
         return cell

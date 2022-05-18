@@ -15,16 +15,16 @@ protocol SeatSelectorDelegate {
 class SeatSelector: UIScrollView, UIScrollViewDelegate {
     
     var seatSelectorDelegate: SeatSelectorDelegate?
-    var seat_width:     CGFloat = 20.0
-    var seat_height:    CGFloat = 20.0
-    var selected_seats          = NSMutableArray()
-    var available_image     = UIImage()
-    var unavailable_image   = UIImage()
-    var disabled_image      = UIImage()
-    var selected_image      = UIImage()
-    let zoomable_view       = UIView()
+    var seat_width: CGFloat = 20.0
+    var seat_height: CGFloat = 20.0
+    var selected_seats = NSMutableArray()
+    var available_image = UIImage()
+    var unavailable_image = UIImage()
+    var disabled_image = UIImage()
+    var selected_image = UIImage()
+    let zoomable_view = UIView()
     var selected_seat_limit:Int = 0
-    var layout_type                = ""
+    var layout_type = ""
     
     // MARK: - Init and Configuration
     

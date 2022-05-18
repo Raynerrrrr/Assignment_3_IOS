@@ -47,7 +47,7 @@ class MoviesViewController: UIViewController
     
     // This function reads the movie data from system memory
     func readMovieData() -> [MoviesData] {
-        // Read the highscores from user defaults
+        // Read the movies from user defaults
         let defaults = UserDefaults.standard
         
         if let moviesArray = defaults.value(forKey: USER_DEFAULT_MOVIES_DATA) as? Data {
