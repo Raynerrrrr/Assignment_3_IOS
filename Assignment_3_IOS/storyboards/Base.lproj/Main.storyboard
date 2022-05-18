@@ -13,7 +13,7 @@
             <objects>
                 <navigationController id="CCz-I6-utC" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GIH-Sz-Cyd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -408,7 +408,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEg-um-rF6">
-                                <rect key="frame" x="107.5" y="429" width="105" height="31"/>
+                                <rect key="frame" x="108" y="76" width="105" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Select Seats"/>
                                 <connections>
@@ -420,9 +420,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vY0-EB-Zl3" firstAttribute="top" secondItem="6tt-XX-oqz" secondAttribute="top" id="0X3-y6-nSh"/>
-                            <constraint firstItem="6tt-XX-oqz" firstAttribute="bottom" secondItem="zEg-um-rF6" secondAttribute="bottom" constant="20" id="6rh-7m-Nh2"/>
+                            <constraint firstItem="6tt-XX-oqz" firstAttribute="trailing" secondItem="zEg-um-rF6" secondAttribute="trailing" constant="107" id="123-qo-BAo"/>
+                            <constraint firstItem="zEg-um-rF6" firstAttribute="leading" secondItem="6tt-XX-oqz" secondAttribute="leading" constant="108" id="1f7-3J-R8H"/>
                             <constraint firstItem="6tt-XX-oqz" firstAttribute="trailing" secondItem="vY0-EB-Zl3" secondAttribute="trailing" constant="34" id="EkY-cV-6aX"/>
-                            <constraint firstItem="zEg-um-rF6" firstAttribute="centerX" secondItem="UtM-NR-ycP" secondAttribute="centerX" id="PfU-kH-Uwz"/>
+                            <constraint firstItem="zEg-um-rF6" firstAttribute="top" secondItem="vY0-EB-Zl3" secondAttribute="bottom" constant="8" symbolic="YES" id="MLH-c4-y6F"/>
                             <constraint firstItem="vY0-EB-Zl3" firstAttribute="leading" secondItem="6tt-XX-oqz" secondAttribute="leading" constant="34" id="yVT-NN-hD3"/>
                         </constraints>
                     </view>

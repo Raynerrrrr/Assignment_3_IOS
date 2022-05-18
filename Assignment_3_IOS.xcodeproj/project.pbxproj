@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B51C5DF2832502B007E0D4D /* seats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B51C5DE2832502B007E0D4D /* seats.swift */; };
 		3B6AC2D828337D5D00D2CA2A /* the_lost_city.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6AC2D728337D5D00D2CA2A /* the_lost_city.jpeg */; };
 		3B6AC2DA28337FF800D2CA2A /* frozen.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6AC2D928337FF800D2CA2A /* frozen.jpeg */; };
 		3B6AC2DC2833803D00D2CA2A /* home_alone.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3B6AC2DB2833803D00D2CA2A /* home_alone.jpeg */; };
+		3B9BF1EF28349D4A0069347F /* S@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B9BF1EC28349D4A0069347F /* S@2x.png */; };
+		3B9BF1F028349D4A0069347F /* A@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B9BF1ED28349D4A0069347F /* A@2x.png */; };
+		3B9BF1F128349D4A0069347F /* U@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B9BF1EE28349D4A0069347F /* U@2x.png */; };
+		3B9BF1F328349E0E0069347F /* D@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B9BF1F228349E0E0069347F /* D@2x.png */; };
+		3B9BF1F528349EA40069347F /* SeatSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9BF1F428349EA40069347F /* SeatSelector.swift */; };
 		F71161A52831D8E400BC6C7C /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71161A42831D8E400BC6C7C /* ConfirmationViewController.swift */; };
 		F71161A72831DBA500BC6C7C /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71161A62831DBA500BC6C7C /* TicketsViewController.swift */; };
 		F71B41DE282D54E1004F5DD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B41DD282D54E1004F5DD8 /* AppDelegate.swift */; };
@@ -25,10 +29,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B51C5DE2832502B007E0D4D /* seats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seats.swift; sourceTree = "<group>"; };
 		3B6AC2D728337D5D00D2CA2A /* the_lost_city.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = the_lost_city.jpeg; sourceTree = "<group>"; };
 		3B6AC2D928337FF800D2CA2A /* frozen.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = frozen.jpeg; sourceTree = "<group>"; };
 		3B6AC2DB2833803D00D2CA2A /* home_alone.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home_alone.jpeg; sourceTree = "<group>"; };
+		3B9BF1EC28349D4A0069347F /* S@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S@2x.png"; sourceTree = "<group>"; };
+		3B9BF1ED28349D4A0069347F /* A@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "A@2x.png"; sourceTree = "<group>"; };
+		3B9BF1EE28349D4A0069347F /* U@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "U@2x.png"; sourceTree = "<group>"; };
+		3B9BF1F228349E0E0069347F /* D@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "D@2x.png"; sourceTree = "<group>"; };
+		3B9BF1F428349EA40069347F /* SeatSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeatSelector.swift; sourceTree = "<group>"; };
 		F71161A42831D8E400BC6C7C /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		F71161A62831DBA500BC6C7C /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
 		F71B41DA282D54E1004F5DD8 /* Assignment_3_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment_3_IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,7 +66,7 @@
 		3B51C5DB28325002007E0D4D /* models */ = {
 			isa = PBXGroup;
 			children = (
-				3B51C5DE2832502B007E0D4D /* seats.swift */,
+				3B9BF1F428349EA40069347F /* SeatSelector.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -112,6 +120,10 @@
 				3B6AC2D928337FF800D2CA2A /* frozen.jpeg */,
 				3B6AC2DB2833803D00D2CA2A /* home_alone.jpeg */,
 				3B6AC2D728337D5D00D2CA2A /* the_lost_city.jpeg */,
+				3B9BF1ED28349D4A0069347F /* A@2x.png */,
+				3B9BF1F228349E0E0069347F /* D@2x.png */,
+				3B9BF1EC28349D4A0069347F /* S@2x.png */,
+				3B9BF1EE28349D4A0069347F /* U@2x.png */,
 				F71B41E8282D54E2004F5DD8 /* LaunchScreen.storyboard */,
 				F71B41EB282D54E2004F5DD8 /* Info.plist */,
 			);
@@ -176,11 +188,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B9BF1F128349D4A0069347F /* U@2x.png in Resources */,
 				F71B41EA282D54E2004F5DD8 /* LaunchScreen.storyboard in Resources */,
 				3B6AC2DC2833803D00D2CA2A /* home_alone.jpeg in Resources */,
 				3B6AC2DA28337FF800D2CA2A /* frozen.jpeg in Resources */,
+				3B9BF1EF28349D4A0069347F /* S@2x.png in Resources */,
 				F71B41E7282D54E2004F5DD8 /* Assets.xcassets in Resources */,
 				3B6AC2D828337D5D00D2CA2A /* the_lost_city.jpeg in Resources */,
+				3B9BF1F328349E0E0069347F /* D@2x.png in Resources */,
+				3B9BF1F028349D4A0069347F /* A@2x.png in Resources */,
 				F71B41E5282D54E1004F5DD8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,7 +213,7 @@
 				F72FECDB28312DA9009958F6 /* SeatsViewController.swift in Sources */,
 				F7B7766C2831104900BE9CF5 /* TimeViewController.swift in Sources */,
 				F71161A72831DBA500BC6C7C /* TicketsViewController.swift in Sources */,
-				3B51C5DF2832502B007E0D4D /* seats.swift in Sources */,
+				3B9BF1F528349EA40069347F /* SeatSelector.swift in Sources */,
 				F71B41DE282D54E1004F5DD8 /* AppDelegate.swift in Sources */,
 				F71B41E0282D54E1004F5DD8 /* SceneDelegate.swift in Sources */,
 				F7B7766A2831065B00BE9CF5 /* MoviesViewController.swift in Sources */,
