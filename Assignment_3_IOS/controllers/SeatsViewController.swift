@@ -73,10 +73,11 @@ class SeatsViewController: UIViewController, SeatSelectorDelegate
             userSeats.append(seatData)
             print(userSeats)
         } else {
-                for i in 0...(userSeats.count - 1) {
-                    print(userSeats[i])
-                    if seatData == userSeats[i] {
-                        userSeats.remove(at: i)
+                var x = -1
+                for i in userSeats {
+                    x += 1
+                    if seatData == i {
+                        userSeats.remove(at: x)
                     }
                 }
             print(userSeats)
